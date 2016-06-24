@@ -11,7 +11,6 @@ this stuff is worth it, you can buy me a beer in return.
 """
 
 from Crypto.PublicKey import RSA
-from wiener_attack import WienerAttack
 import gmpy
 from libnum import *
 import requests
@@ -108,7 +107,7 @@ if __name__ == "__main__":
     F4An8LIn_rElT3r_rELa53d_Me33Age_aTtaCk_e_I2_s7aLL
     """
 
-    words = open("../rsa3/words.txt", 'r')
+    words = open("../rsa3/w.txt", 'r')
     lists = words.readlines()
     for oneList in lists:
         oneRec = oneList.strip().split(',')
@@ -125,8 +124,8 @@ if __name__ == "__main__":
 
         c = orig
         while True:
-            m = gmpy.root(c, 19)[0]
-            if pow(m, 19, pub_key.n) == orig:
+            m = gmpy.root(c, 3)[0]
+            if pow(m, 3, pub_key.n) == orig:
                 unciphered = n2s(m)
                 print m
                 break
