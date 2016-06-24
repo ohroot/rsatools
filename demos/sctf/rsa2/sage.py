@@ -17,4 +17,4 @@ d4=inverse_mod(e,phi)
 print "d4",d4
 m=pow(c4,d4,n4)
 print "m=%s"%m
-prinif"flag is",n2s(int(m))
+print "flag is",n2s(int(m))
